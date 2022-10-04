@@ -5,15 +5,24 @@ body {
   }
 
 header {
-  position: sticky;
-  background-color: white;
+  position: fixed;
+  background-color: none;
   top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
   z-index: 1;
-  }
+  left: 0;
+  right: 0;
+  transition: background-color, box-shadow .25s ease;
+}
+
+.header__scrolled {
+  background-color: white;
+  box-shadow: 0 12px 34px -11px rgb(65 62 101 / 10%);
+}
+
 
 .header__logo {
     height: 30px;
@@ -38,7 +47,7 @@ header {
     border: none;
     border-radius: 15px;
     cursor: pointer;
-    box-shadow: 0 16px 36px rgb(52 213 68 / 22%);
+    box-shadow: 0 16px 36px rgb(52 213 68 / 25%);
     padding: 15px;
   }
 
@@ -72,7 +81,7 @@ header {
       display:flex;
       align-items: center;
       justify-content: space-around;
-      padding-top: 115px;
+      padding-top: 200px;
       padding-bottom: 115px;
       background: url('img/back.png') no-repeat;
       background-position: center;
@@ -169,23 +178,25 @@ header {
     margin-top: 40px;
   }
   
-  select {
-    appearance: none;
-  }
+select {
+  appearance: none;
+}
   
-  input,
-  #budget {
+input,
+#budget {
   outline: none;
- }
+}
 
- button:hover {
+button:hover, 
+.promo__text button:hover {
   background-color: #f6980c;
   box-shadow: 0 16px 36px rgba(246, 152, 12, 0.243);
   color: #000000c0;
 }
  
-button {
-  transition: background-color 0.3s ease-in;
+button,
+.promo__text button {
+  transition: background-color 0.2s ease-in;
 }
 
 footer{
@@ -233,15 +244,13 @@ footer{
   display:grid;
   grid-gap: 50px;
   grid-template-columns: 1fr 1fr 1fr;
-  padding-left: 20px;
 }
 
-.card{
+.card {
   padding: 35px 40px 25px 40px;
   border: 1px solid #D9E4E6;
   border-radius: 5px;
   background: #FFFFFF;
-  margin: 30px;
 }
 
 .card p {
@@ -276,23 +285,25 @@ footer{
   margin-top: 50px;
   margin-bottom: 50px;
   border: 1px solid #E6EAF4;
-  padding: 40px;
+  width: 100%;
 }
 
 .features__feedback {
   display: flex;
   align-items: center;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .features__feedback-left {
   margin-right: 10px;
 }
 
-.features__feedback-left h2{
+.features__feedback-left h2 {
   font-size: 48px;
 }
 
-.features__feedback-left p{
+.features__feedback-left p {
   font-size: 18px;
   line-height: 26px;
   opacity: 0.7;
@@ -434,7 +445,7 @@ footer{
 
   .about {
       flex-direction: column-reverse;
-      padding: 50px 10px;
+      padding: 110px 10px;
   }
 
   .about h1 {
@@ -460,7 +471,7 @@ footer{
   }
 
   .form__group {
-    width: 350px;
+    width: 100%;
     max-width: 100%;
   }
 

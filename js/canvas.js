@@ -1,4 +1,4 @@
-const COLORS = ["50, 205, 50", "64, 224, 208", "255, 215, 0", "138, 43, 226"];
+const COLORS = ["50, 205, 50", "64, 224, 208", "255, 215, 0", "138, 43, 226", "255, 20, 147"];
 const BUBBLE_DENSITY = 90;
 
 function generateDecimalBetween(left, right) {
@@ -21,7 +21,7 @@ function generateDecimalBetween(left, right) {
   
     init() {
         this.color = COLORS[Math.floor(Math.random() * COLORS.length)]
-        this.size = generateDecimalBetween(1, 5);
+        this.size = generateDecimalBetween(1, 4);
         this.alpha = generateDecimalBetween(5, 10) / 10;
         this.translateX = generateDecimalBetween(0, this.canvasWidth);
         this.translateY = generateDecimalBetween(0, this.canvasHeight);
