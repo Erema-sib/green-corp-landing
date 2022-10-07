@@ -282,10 +282,10 @@ footer{
 }
 
 .features__border {
+  width: 100%;
   margin-top: 50px;
   margin-bottom: 50px;
   border: 1px solid #E6EAF4;
-  width: 100%;
 }
 
 .features__feedback {
@@ -525,7 +525,7 @@ footer{
     height: 500px;
   }
   
-  .promo__right{
+  .promo__right {
     padding: 50px 10px;
   }
 }
